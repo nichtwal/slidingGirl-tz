@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #181818;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+}
+
+.text--container {
+  margin: 72px 0 0 50px;
+}
+.text--container__info h1 {
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.text--container__info p {
+  max-width: 450px;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170%; /* 37.4px */
+}
+
+.text--container__info p:nth-child(2) {
+  margin: 50px 0 30px;
+}
+.image--container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  min-width: 350px;
+}
+
+.image--container__blackhole {
+  position: relative;
+  width: 450px;
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.girl-image {
+  position: absolute;
+  animation-name: girlAnimation;
+  animation-duration: 6s; /* Длительность анимации девушки */
+  animation-fill-mode: forwards; /* Завершить анимацию и оставить последний кадр */
+  z-index: 1;
+  width: 400px;
+  object-fit: contain;
+}
+
+.black-hole {
+  object-fit: contain;
+  animation-name: blackHoleAnimation;
+  animation-duration: 7s; /* Длительность анимации черной дыры */
+  animation-fill-mode: forwards; /* Завершить анимацию и оставить последний кадр */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+}
+
+@keyframes girlAnimation {
+  0% {
+    transform: translateY(900px);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes blackHoleAnimation {
+  0% {
+    transform: scale(1); /* Начальный размер черной дыры */
+  }
+  20% {
+    transform: scale(1.55); /* Расширение черной дыры (середина анимации) */
+  }
+  100% {
+    transform: scale(0.7); /* Сужение черной дыры (конец анимации) */
+  }
+}
+
+.phone--container {
+  margin-top: 72px;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 650px;
+}
+.phone--container img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.footer--container {
+  margin: 60px 0 0;
+}
+
+.footer--container h2 {
+  text-transform: uppercase;
+  font-size: 44.791px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 90%; /* 40.312px */
+}
+.footer--container p {
+  text-transform: uppercase;
+  font-size: 61.416px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 90%; /* 55.275px */
+  margin: 50px 0 0 30px;
+}
+.footer--container p span {
+  font-weight: normal;
+}
+
+@media screen and (max-width: 1835px) {
+  .text--container {
+    margin: 72px 0 0 60px;
+  }
+  .text--container__info p {
+    max-width: 400px;
+    font-size: 18px;
+  }
+  .phone--container {
+    max-height: 700px;
+  }
+
+  .footer--container h2 {
+    font-size: 40px;
+  }
+  .footer--container p {
+    font-size: 55px;
+  }
+}
+
+@media screen and (max-width: 1750px) {
+  .image--container {
+    max-height: 780px;
+  }
+  .girl-image {
+    max-height: 680px;
+  }
+  .phone--container {
+    margin-top: unset;
+    min-height: unset;
+  }
+  .phone--container img {
+    width: 100%;
+  }
+  .text--container__info h1 {
+    font-size: 34px;
+  }
+  .footer--container h2 {
+    font-size: 35px;
+  }
+  .footer--container p {
+    font-size: 45px;
+  }
+}
+
+@media screen and (max-width: 1650px) {
+  .text--container {
+    margin: 35px 0 0 60px;
+  }
+  .text--container__info p:nth-child(2) {
+    margin: 20px 0;
+  }
+  .image--container {
+    max-height: 700px;
+  }
+  .girl-image {
+    height: 550px;
+  }
+  .phone--container {
+    max-height: 700px;
+  }
+  .footer--container h2 {
+    font-size: 30px;
+  }
+  .footer--container p {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 1595px) {
+  .image--container,
+  .phone--container {
+    max-height: 670px;
+  }
+  .footer--container h2 {
+    font-size: 28px;
+  }
+  .footer--container p {
+    font-size: 35px;
+    margin: 30px 0 0 25px;
+  }
+}
+
+@media screen and (max-width: 1530px) {
+  .text--container__info p {
+    font-size: 14px;
+    max-width: 305px;
+  }
+  .image--container,
+  .phone--container {
+    max-height: 590px;
+  }
+  .girl-image {
+    height: 500px;
+    width: 350px;
+  }
+  .footer--container h2 {
+    font-size: 25px;
+  }
+  .footer--container p {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 1490px) {
+  .footer--container {
+    margin: 30px 0 0;
+  }
+  .footer--container h2 {
+    font-size: 20px;
+  }
+  .footer--container p {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .phone--container {
+    max-width: 480px;
+  }
+  .image--container {
+    max-width: 400px;
+  }
+  .girl-image {
+    height: 450px;
+  }
+  .black-hole {
+    width: 108px;
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .phone--container {
+    max-width: 400px;
+  }
+  .girl-image {
+    height: 400px;
+    top: -80px;
+  }
+  .black-hole {
+    width: 100px;
+  }
+  .text--container__info h1 {
+    font-size: 20px;
+  }
+  .text--container__info p {
+    line-height: 25px;
+  }
+  .text--container__info p:nth-child(2) {
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  main {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 20px 0;
+  }
+  .text--container {
+    margin: 0;
+  }
+  .text--container p {
+    max-width: 450px;
+  }
+  .footer--container {
+    position: absolute;
+    bottom: -50px;
+  }
+  .image--container__blackhole {
+    width: 100%;
+  }
+
+  .image--container {
+    max-height: unset;
+    min-height: 500px;
+  }
+  .phone--container {
+    margin: 20px 0 40px
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .girl-image {
+    width: 100%;
+  }
+}
